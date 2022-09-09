@@ -1,0 +1,50 @@
+package weeklyassignment;
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class SampleError {
+	static String pattern = "###.000";
+	static DecimalFormat df = new DecimalFormat(pattern);
+
+	static double getAbsoluteError(double av, double ev) {
+		double ae;
+		ae = ev - av;
+		System.out.println("Absolute error is units " + df.format(ae));
+		return ae;
+
+	}
+
+	static double getRelativeError(double av, double ae) {
+		double re;
+		re = ae / av;
+		System.out.println("Relative error is units "+ df.format(re));
+		return re;
+
+	}
+
+	static double getPercentageError(double av, double ae) {
+		double pe;
+		pe = (ae / av) * 100;
+		System.out.println("Percentage error is units "+ df.format(pe));
+		return pe;
+	}
+
+	public static void main(String[] args) {
+		double num , n;
+		System.out.println("Enter actual value ");
+		Scanner sc = new Scanner(System.in);
+		num = sc.nextInt();
+		System.out.println("Enter expected value ");
+		Scanner scn = new Scanner(System.in);
+		n = scn.nextInt();
+		if (num!=0) {
+			getAbsoluteError(num, n);
+			getRelativeError(num, n);
+			getPercentageError(num, n);
+			}
+				
+		else
+			System.out.println("Invalid actual value it must be more than zero");
+		}
+
+}
