@@ -12,10 +12,10 @@ method
     outdoor game
     life time membership
     weekly------------------
-                    sorttuam
+                    shortterm
     monthly----------------
     tournament
-singal
+single
     player id,name,gender,
 static
     playersname,dob,gender
